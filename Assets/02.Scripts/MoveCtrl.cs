@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MoveCtrl : MonoBehaviour
 {
+    public static bool isStopped = false;
+
     public enum MoveType
     {
         WAY_POINT,
