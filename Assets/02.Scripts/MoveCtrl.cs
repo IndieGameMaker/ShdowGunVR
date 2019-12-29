@@ -18,8 +18,12 @@ public class MoveCtrl : MonoBehaviour
 
     public int nextIdx = 1;
 
+    private CharacterController cc;
+
     void Start()
     {
+        cc = GetComponent<CharacterController>();
+
         GameObject wayPointGroup = GameObject.Find("WayPointGroup");
         if (wayPointGroup != null)
         {
@@ -56,7 +60,7 @@ public class MoveCtrl : MonoBehaviour
 
     void MoveLookAt()
     {
-        
+        cc.SimpleMove(Camera.main.transform.forward * speed);
     }
 
     void OnTriggerEnter(Collider coll)
