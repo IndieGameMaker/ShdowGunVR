@@ -63,7 +63,16 @@ public class MoveCtrl : MonoBehaviour
     {
         if (coll.CompareTag("WAY_POINT"))
         {
-            
+            //삼항 연산자 (조건문) ? 참 : 거짓
+            nextIdx = (++nextIdx >= points.Length) ? 1 : nextIdx;
+
+            /*
+            ++nextIdx;
+            if (nextIdx >= points.Length)
+            {
+                nextIdx = 1;
+            }
+            */
         }
     }
 
