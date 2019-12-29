@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ItemBox : MonoBehaviour
+public class ItemBox : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 
     public void OnLookAt(bool isLook)
@@ -12,4 +13,13 @@ public class ItemBox : MonoBehaviour
         MoveCtrl.isStopped = isLook;
     }
 
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        
+    }
 }
