@@ -8,6 +8,8 @@ public class ItemBox : MonoBehaviour
     public void OnLookAt(bool isLook)
     {
         Debug.Log("isLook=" + isLook);
+
+        MoveCtrl.isStopped = isLook;
     }
 
 }
