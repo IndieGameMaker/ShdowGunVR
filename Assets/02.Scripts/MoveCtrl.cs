@@ -43,6 +43,8 @@ public class MoveCtrl : MonoBehaviour
         }
         #endif
 
+        if (isStopped) return;
+
         switch (moveType)
         {
             case MoveType.WAY_POINT:
