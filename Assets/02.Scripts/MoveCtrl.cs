@@ -50,12 +50,21 @@ public class MoveCtrl : MonoBehaviour
         Quaternion rot = Quaternion.LookRotation(dir);
         //구체선형보간 함수를 이용해 부드럽게 회전
         transform.rotation = Quaternion.Slerp (transform.rotation, rot, Time.deltaTime * damping);
+        //전진
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 
     void MoveLookAt()
     {
         
+    }
+
+    void OnTriggerEnter(Collider coll)
+    {
+        if (coll.CompareTag("WAY_POINT"))
+        {
+            
+        }
     }
 
 
